@@ -12,7 +12,7 @@ export default {
         operation: { type: Boolean },
         double: { type: Boolean },
         triple: { type: Boolean }
-    }
+}
 }
 </script>
 

@@ -1,16 +1,23 @@
 <template>
-    <div class="display"></div>
+    <div class="display">{{ value }}</div>
 </template>
 
 <script>
 export default {
-    name: 'Display'
+    name: 'Display',
+    props: ['value']
 }
 </script>
 
 <style>
 
 .display {
-    grid-column: span 3;
+    grid-column: span 4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2.1rem;
 }
 </style>

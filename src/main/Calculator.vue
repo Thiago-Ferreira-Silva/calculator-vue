@@ -1,6 +1,6 @@
 <template>
     <div class="calculator">
-        <Display />
+        <Display :value="displayValue" />
         <Button label="AC" triple @on-click="clearMemory"/>
         <Button label="/" operation @on-click="setOperation"/>
         <Button label="7" @on-click="addDigit"/>
