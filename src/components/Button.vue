@@ -26,4 +26,26 @@ export default {
     grid-column: span 3;
 }
 
+.button.operation {
+    background-color: #fa8231;
+    color: #fff;
+}
+
+.button.operation:active {
+    background-color: #fa8231cc;
+}
+
+.button {
+    font-size: 1.4rem;
+    background-color: #f0f0f0;
+    border: none;
+    border-bottom: solid 1px #888;
+    border-right: solid 1px #888;
+    outline: none;
+}
+
+.button:active {
+    background-color: #ccc;
+}
+
 </style>

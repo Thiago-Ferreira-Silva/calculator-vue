@@ -19,6 +19,7 @@ export default {
     align-items: center;
     padding: 5px;
 
+    background-color: #0004;
     font-size: 2.1rem;
     overflow: hidden;
 }

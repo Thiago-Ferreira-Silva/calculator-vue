@@ -27,7 +27,8 @@ export default {
   font-family: "RobotoMono", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #fff;
+  background-color: #5c6779;
 
   display: flex;
   flex-direction: column;
