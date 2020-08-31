@@ -53,4 +53,15 @@ export default {
 
 <style>
 
+.calculator {
+    height: 320px;
+    width: 235px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: 1fr repeat(5,48px);
+}
+
 </style>
