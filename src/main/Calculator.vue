@@ -39,10 +39,14 @@ export default {
     },
     methods: {
         clearMemory() {
-
+            Object.assign(this.$data, this.$options.data())
         },
-        setOperation() {
-
+        setOperation(operation) {
+            if(this.current === 0) {
+                this.operation = operation
+                this.current = 1
+                this.clearDisplay = true
+            }
         },
         addDigit() {
 
