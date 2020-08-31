@@ -15,9 +15,11 @@ export default {
     grid-column: span 4;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding: 5px;
 
     font-size: 2.1rem;
+    overflow: hidden;
 }
 </style>

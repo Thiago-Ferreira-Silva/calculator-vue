@@ -79,10 +79,13 @@ export default {
         },
         addDigit(digit) {
             if (digit === '.' && this.displayValue.includes('.')) return
+            if (this.displayValue.length > 9 && this.clearDisplay === false) return
+            if (this.displayValue === '0') this.displayValue = ''
             
             const currentValue = this.displayValue
 
             this.clearDisplay ? this.displayValue = digit : this.displayValue = currentValue + digit
+            this.clearDisplay = false
 
             this.values[this.current] = this.displayValue.includes('.') ?  parseFloat(this.displayValue) : parseInt(this.displayValue)
         }
@@ -96,7 +99,6 @@ export default {
     height: 320px;
     width: 235px;
     border-radius: 5px;
-    overflow: hidden;
 
     display: grid;
     grid-template-columns: repeat(4,25%);
