@@ -30,7 +30,7 @@ export default {
     components: { Button, Display },
     data: function() {
         return {
-            displayValue: 0,
+            displayValue: '0',
             clearDisplay: false,
             operation: null,
             values: [0, 0],
@@ -66,7 +66,7 @@ export default {
                 this.values = [result, 0]
                 this.current = 1
                 this.clearDisplay = true
-                this.displayValue = result
+                this.displayValue = `${result}`
 
                 if (operation === '=') {
                         this.current = 0
@@ -77,8 +77,14 @@ export default {
                 }
             }
         },
-        addDigit() {
-            //faça sem olhar
+        addDigit(digit) {
+            if (digit === '.' && this.displayValue.includes('.')) return
+            
+            const currentValue = this.displayValue
+
+            this.clearDisplay ? this.displayValue = digit : this.displayValue = currentValue + digit
+
+            this.values[this.current] = this.displayValue.includes('.') ?  parseFloat(this.displayValue) : parseInt(this.displayValue)
         }
     }
 }
