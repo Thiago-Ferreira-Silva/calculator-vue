@@ -30,7 +30,7 @@ export default {
     components: { Button, Display },
     data: function() {
         return {
-            displayValue: '0',
+            displayValue: 0,
             clearDisplay: false,
             operation: null,
             values: [0, 0],
@@ -46,10 +46,39 @@ export default {
                 this.operation = operation
                 this.current = 1
                 this.clearDisplay = true
+            } else {
+                let result = 0
+                switch (this.operation) {
+                    case '+' :
+                        result = this.values[0] + this.values[1]
+                        break
+                    case '-' :
+                        result = this.values[0] - this.values[1]
+                        break
+                    case '*' :
+                        result = this.values[0] * this.values[1]
+                        break
+                    case '/' :
+                        result = this.values[0] / this.values[1]
+                        break
+                }
+
+                this.values = [result, 0]
+                this.current = 1
+                this.clearDisplay = true
+                this.displayValue = result
+
+                if (operation === '=') {
+                        this.current = 0
+                        this.clearDisplay = false
+                        this.operation = null
+                } else {
+                    this.operation = operation
+                }
             }
         },
         addDigit() {
-
+            //faça sem olhar
         }
     }
 }
