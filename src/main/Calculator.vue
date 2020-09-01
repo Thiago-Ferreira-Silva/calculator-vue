@@ -59,7 +59,15 @@ export default {
                         result = this.values[0] * this.values[1]
                         break
                     case '/' :
-                        result = this.values[0] / this.values[1]
+                        if (this.values[1] === 0) {
+                            this.displayValue = 'Are you fu****g crazy?'
+                            this.values = [0, 0]
+                            this.current = 0
+                            this.clearDisplay = true
+                            return
+                        } else {
+                            result = this.values[0] / this.values[1]
+                        }
                         break
                 }
 

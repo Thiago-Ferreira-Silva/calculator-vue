@@ -23,6 +23,10 @@ export default {
   src: url("./fonts/RobotoMono-Thin.ttf");
 }
 
+body {
+  margin: 0;
+}
+
 #app {
   font-family: "RobotoMono", monospace;
   -webkit-font-smoothing: antialiased;
